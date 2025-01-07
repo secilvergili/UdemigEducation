@@ -1,0 +1,63 @@
+
+//? SCSS projelerinde style.scss dosyası açıldıktan sonra
+/* "WHATCH SASS" tıklayarak watching.... ile tüm browserlarda 
+* tanınması sağlanır.-->
+*/ 
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+// SCSS Imports
+@import "./variables";
+@import "./header";
+@import "./home";
+@import "./global";
+@import "./educations";
+@import "./aboutUs";
+@import "./topEducations";
+@import "./contactUs";
+@import "./footer";
+
+
+
+// CSS Reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+a {
+    color: $text-color;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: $bg-color;
+    color: $text-color;
+}
+
+section {
+    padding: 70px 17% 60px;
+}
+
+.btn {
+    padding: 13px 40px;
+    display: inline-block;
+    background-color: $main-color;
+    color: $bg-color;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    @extend .transition;
+    &:hover {
+        border: 2px solid white;
+        background-color: transparent;
+        color: $text-color;
+        transform: translateX(10px);
+    }
+}
+
